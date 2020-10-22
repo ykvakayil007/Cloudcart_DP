@@ -1,0 +1,61 @@
+<style>
+  .loginform{
+    margin-left: 39%;
+    margin-top: 3%;
+  }
+  .passlabel{
+    margin-top: 2%;
+  }
+  h2{
+    margin-left: 45%;
+    margin-top: 10%;
+  }
+  body{
+    background-color: #faf4ff;
+  }
+  h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 1%;
+  }
+  .button
+  {
+    padding: 4px 106px;
+    border-radius: 8px
+  }
+  .button:hover{
+    background-color: 	#00ff40;
+  }
+  .forgot{
+    margin-top: 10%;
+    margin-left: 8%;
+  }
+  #icon{
+    margin-top: 10%;
+    margin-left: 46%;
+  }
+</style>
+<body>
+  <i class='fas fa-user-alt' style='font-size:48px;' id="icon"></i><br>
+  <h2>Login</h2>
+  <div class="loginform">
+    <input type="email" name="Email" id="emailid" placeholder="Email-id" size="30"><br>
+    <br>
+    <input type="password" name="password" id="password" placeholder="password" size="30"><br>
+    <input type="checkbox" onclick="myFunction()" class="passlabel">Show Password  <br>
+    <br>
+    <button type="button" class="button">Login</button><br>
+    <br>
+    <a href="" class="forgot">forgot password?</a>
+  </div>
+</body>
+</html>
+<script>
+function myFunction() {
+var x = document.getElementById("password");
+if (x.type === "password") {
+  x.type = "text";
+} else {
+  x.type = "password";
+}
+}
+</script>

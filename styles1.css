@@ -1,0 +1,30 @@
+body{
+  background-color: #fcf876;
+}
+.form{
+  margin-top: 140px;
+  margin-left: 30%;
+}
+h2{
+  margin-left: 180px;
+}
+#fn{
+  margin-top: 15px;
+  margin-left: 106px;
+}
+#ln{
+  margin-left: 23px;
+}
+#email{
+  margin-left: 90px;
+}
+#mob{
+  margin-left: 73px;
+}
+#address{
+  margin-left: 91px;
+}
+.loginform{
+  margin-left: 35%;
+  margin-top: 25%;
+}
