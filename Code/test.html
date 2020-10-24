@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
+<div class="container" id="titleMain" style="background-color: red;">Book List</div>
+<form  id="searchbar">
+  <input type="text" placeholder="Search a book ... ">
+</form>
+<div class="container">
+  <div class="row list-single">
+    <div class="col-2"><img src="https://images.gr-assets.com/books/1447303603s/2767052.jpg" /></div>
+    <div class="col-10">
+      <h5> The Hunger Games</h5>
+      <a href="The-Hunger-Games.html">Learn</a>
+    </div>
+  </div>
+  <br>
+  <div class="row list-single">
+    <div class="col-2"><img src="https://images.gr-assets.com/books/1507396732s/2.jpg" /></div>
+    <div class="col-10">
+      <h5>Harry Potter</h5>
+      <a href="Harry-Potter.html">Learn</a>
+    </div>
+  </div>
+  <div class="row list-single" id="notAvailable" style="display: none;">
+    <div class="col-12">
+      <h5>Sorry, the book has not been added yet</h5>
+    </div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </body>
+</html>
+
+<script>
+  const searchBar = document.forms['searchbar'].querySelector('input');
+searchBar.addEventListener('keyup', function(e) {
+  const term = e.target.value.toLocaleLowerCase();
+  const books = document.getElementsByTagName('h5');
+  var notAvailable = document.getElementById('notAvailable');
+  $("#titleMain").toggle($('input').val().length == 0);
+  var hasResults = false;
+  Array.from(books).forEach(function(book) {
+    const title = book.textContent;
+    if (title.toLowerCase().indexOf(term) != -1) {
+      book.parentElement.parentElement.style.display = 'flex';
+      hasResults = true;
+    } else {
+      book.parentElement.parentElement.style.display = 'none';
+    }
+  });
+  notAvailable.style.display = hasResults ? 'none' : 'block';
+});
+</script>

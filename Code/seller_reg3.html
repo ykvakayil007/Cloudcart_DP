@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    
+    <title>
+      Seller Registration
+    </title>
+  </head>
+  <style>
+    .tax-details{
+      margin-left: 30px;
+      margin-top: 40px;
+    }
+    h3{
+      margin-top: 40px;
+      text-align: center;
+    }
+    .form-control{
+      size: 40;
+    }
+
+    .form-control-placeholder {
+  position: absolute;
+  top: 0;
+  padding: 7px 0 0 13px;
+  transition: all 200ms;
+  opacity: 0.5;
+}
+
+.form-control:focus + .form-control-placeholder,
+.form-control:valid + .form-control-placeholder {
+  font-size: 75%;
+  transform: translate3d(0, -100%, 0);
+  opacity: 1;
+}
+
+  </style>
+<body style="background-color: #e3f2fd;">
+  <div class="progress">
+    <div class="progress-bar bg-success" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">Progress(60%)</div>
+  </div>
+<h3>Update your tax details</h3>
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <div class="tax-details">
+        <h5>Do you have GST number?</h5>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" unchecked id="Yes">
+          <label class="form-check-label" for="exampleRadios1">
+           Yes
+          </label>
+        </div>
+      
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" id="No">
+          <label class="form-check-label" for="exampleRadios2">No</label>
+        </div>
+        <br>
+        <div class="form-group">
+          <input type="text" id="GSTIN" class="form-control" required placeholder="Provisional GSTIN">
+        </div>
+        <div class="form-group">
+          <input type="text" id="PAN" class="form-control" required placeholder="PAN Number">
+        </div>
+        <button type="button" class="btn btn-success" onclick="nextPage()">Next</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>
+<script>
+  function nextPage(){
+    location.href = "seller_reg4.html";
+  }
+</script>
